@@ -41,9 +41,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
         `2.2.203 [C:\Program Files\dotnet\sdk]`  
         `3.1.301 [C:\Program Files\dotnet\sdk]`
 - Pick the second version number and install (if needed):   
-    `dotnet tool install --global dotnet-ef --version 3.1.301` Not worked, I installed the latest
+    `dotnet tool install --global dotnet-ef --version 3.1.301` Not worked, I installed with no version
 - `dotnet ef database update`
 - `dotnet ef migrations add InitialCreate -o Data/Migrations`
+- `dotnet ef database update`
 
 ## Get Products Endpoint
 
