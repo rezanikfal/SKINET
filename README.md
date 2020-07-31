@@ -91,3 +91,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - `dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations`
 - `-p|--project <PROJECT>                 The project to use.`
 - `-s|--startup-project <PROJECT>         The startup project to use.`
+
+## Configuring migrations (Entities)
+- Create a Config file to configure every DB entity's specs like  
+    `builder.Property(p => p.Name).IsRequired().HasMaxLength(100);`  
+    `builder.HasOne(b=>b.ProductBrand).WithMany().HasForeignKey(p=>p.ProductBrandId);`  
+
