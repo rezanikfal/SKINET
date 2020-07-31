@@ -69,14 +69,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
              ↓            ↓                  ↓
     CORE (Entity, Interfaces)          Database, stripe
 
-## The Repository Pattern
+## The Repository Pattern [DbConext --- (Repositort) --- Controller]
 - Decouple business code from data access
 - Separation of concern
 - Minimise duplicate query logic
 - Testability
 
-## Add IRepository Interface and Repository Class
-- Create Repository Interface in Core folder and implement it in Infrastructure folder
+## Add IRepository Interface, Repository ans modify Startup
+- Create Repository to inject in the controller
 
 ## Use IProductRepository in the Controller
 - Inject `IProductRepository` in the `ProductController` instead of `StoreContext`  
