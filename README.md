@@ -78,8 +78,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Add IRepository Interface, Repository ans modify Startup
 - Create Repository to inject in the controller
 
-## Use IProductRepository in the Controller
-- Inject `IProductRepository` in the `ProductController` instead of `StoreContext`  
+## Inject IProductRepository in the Controller
+- Switch `IProductRepository` in the `ProductController` with `StoreContext`  
 - Use `ProductRepository` and its methods to retrieve data
 
 ## Add DB tables with Relationship
