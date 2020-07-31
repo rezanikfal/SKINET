@@ -16,10 +16,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Setup EF, Product Entity & StoreContext : DbContext
 
-- Get Dot Net Runtime version: `dotnet --info` => `Host (useful for support):  Version: 3.1.5`
-- `dotnet add package Microsoft.EntityFrameworkCore --version 3.1.5`
-- `dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.5`
-- `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.5`
+- Get Dot Net Runtime version: `dotnet --info` => `Host (useful for support):  Version: 3.1.6`
+- `dotnet add package Microsoft.EntityFrameworkCore --version 3.1.6`
+- `dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.6`
+- `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.6`
 
 ## Setup connection string for SQlite
 
