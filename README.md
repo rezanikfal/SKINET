@@ -85,3 +85,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Add DB tables with Relationship
 - Create `ProductType` and `ProductBrand` tables. They are FK to `Product` table.
 
+## Drop old Db/Migration and Create a new one 
+- `dotnet ef database drop -p Infrastructure -s API`  
+- `dotnet ef migrations remove -p Infrastructure -s API` 
+- `dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations`
+- `-p|--project <PROJECT>                 The project to use.`
+- `-s|--startup-project <PROJECT>         The startup project to use.`
