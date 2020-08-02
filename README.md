@@ -105,3 +105,8 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 ## Seed Data
 - Add `StoreContextSeed` class
 - Add needed code to `API/Startup` to auto-seed DB once you run
+
+## New End Points (Product Brands/Types)
+- Add new methods pattern to the repo interface i.e. `Core/Interfaces/IProductRepository.cs`
+- Implement the interface i.e. `Infrastructure/Data/ProductRepository.cs`
+- Create end points methods in the Controller i.e. `API/Controllers/ProductsController.cs`
