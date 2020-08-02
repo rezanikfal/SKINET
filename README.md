@@ -1,6 +1,6 @@
 # E-Commerce App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1 along with the [bootstrap](https://getbootstrap.com/) version 4.5.0 based on the Udemy's course, [Learn to build an e-commerce app with .Net Core and Angular](https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/) by [Neil Cummings](https://www.udemy.com/user/neil-cummings-2/). 
+This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1 along with the [bootstrap](https://getbootstrap.com/) version 4.5.0 based on the Udemy's course, [Learn to build an e-commerce app with .Net Core and Angular](https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/) by [Neil Cummings](https://www.udemy.com/user/neil-cummings-2/). 
 
 ## Create Solution & Web API
 
@@ -97,3 +97,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     `builder.Property(p => p.Name).IsRequired().HasMaxLength(100);`  
     `builder.HasOne(b=>b.ProductBrand).WithMany().HasForeignKey(p=>p.ProductBrandId);`  
 
+## Update Database /Auto Migrate
+- Update Directly: `dotnet ef database update -p Infrastructure -s API`
+- Drop Directly: `dotnet ef database drop -p Infrastructure -s API`
+- Add needed code to `API/Startup` to auto-create DB once you run
