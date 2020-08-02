@@ -101,3 +101,7 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Update Directly: `dotnet ef database update -p Infrastructure -s API`
 - Drop Directly: `dotnet ef database drop -p Infrastructure -s API`
 - Add needed code to `API/Startup` to auto-create DB once you run
+
+## Seed Data
+- Add `StoreContextSeed` class
+- Add needed code to `API/Startup` to auto-seed DB once you run
