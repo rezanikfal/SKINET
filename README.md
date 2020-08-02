@@ -110,3 +110,24 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Add new methods pattern to the repo interface i.e. `Core/Interfaces/IProductRepository.cs`
 - Implement the interface i.e. `Infrastructure/Data/ProductRepository.cs`
 - Create end points methods in the Controller i.e. `API/Controllers/ProductsController.cs`
+
+## Add product Type/Brand (Id & name) to the Product Endpoint
+- include a JSON object inside the main JSON endpoint  
+
+        {
+            "name": "Core Purple Boots",
+            "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+            "price": 199.99,
+            "pictureUrl": "images/products/boot-core1.png",
+            "productType": {
+                "name": "Boots",
+                "id": 3
+            },
+            "productTypeId": 3,
+            "productBrand": {
+                "name": "NetCore",
+                "id": 2
+            },
+            "productBrandId": 2,
+            "id": 2
+        }
