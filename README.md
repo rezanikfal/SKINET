@@ -131,3 +131,10 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
             "productBrandId": 2,
             "id": 2
         }
+        
+## Add Generic Repository
+- Create Generic Interface
+- Implement the Generic Interface as the Generic Repo
+- Add `AddScoped` to the `Startup.cs`
+- Inject the Generic Repo to the Controller & Use it
+
