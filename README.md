@@ -154,4 +154,6 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Add `IMapper` to the Controller
 - Configure the helper for User defined types by `ForMember` method
 
+## Custom value resolver 
+- Add `https://localhost:5001/` to the beginning of Picture Url
 
