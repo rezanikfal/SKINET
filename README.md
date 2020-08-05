@@ -138,3 +138,9 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Add `AddScoped` to the `Startup.cs`
 - Inject the Generic Repo to the Controller & Use it
 
+## Creating a specification
+- Add specification Class and specification evaluator
+- Create a generic way to add `include` to handel user defined types
+
+
+
