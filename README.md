@@ -142,5 +142,10 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Add specification Class and specification evaluator
 - Create a generic way to add `include` to handel user defined types
 
+## Shaping the data to return with DTOs
+- Create a flat object to return to the client with just needed properties
+- Map the properties from original entity to Dto `Manually`
+
+
 
 
