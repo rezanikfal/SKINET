@@ -157,3 +157,7 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 ## Custom value resolver 
 - Add `https://localhost:5001/` to the beginning of Picture Url
 
+## Store static files in *wwwroot* folder
+- Add image folder
+- Add `UseStaticFiles` middleware
+
