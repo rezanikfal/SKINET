@@ -113,25 +113,26 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 
 ## Add product Type/Brand (Id & name) to the Product Endpoint
 - include a JSON object inside the main JSON endpoint  
-
-        {
-            "name": "Core Purple Boots",
-            "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-            "price": 199.99,
-            "pictureUrl": "images/products/boot-core1.png",
-            "productType": {
-                "name": "Boots",
-                "id": 3
-            },
-            "productTypeId": 3,
-            "productBrand": {
-                "name": "NetCore",
-                "id": 2
-            },
-            "productBrandId": 2,
-            "id": 2
-        }
-        
+```json
+{
+    "name": "Core Purple Boots",
+    "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "price": 199.99,
+    "pictureUrl": "images/products/boot-core1.png",
+    "productType": {
+        "name": "Boots",
+        "id": 3
+    },
+    "productTypeId": 3,
+    "productBrand": {
+        "name": "NetCore",
+        "id": 2
+    },
+    "productBrandId": 2,
+    "id": 2
+}
+```
+       
 ## Add Generic Repository
 - Create Generic Interface
 - Implement the Generic Interface as the Generic Repo
@@ -146,6 +147,11 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Create a flat object to return to the client with just needed properties
 - Map the properties from original entity to Dto `Manually`
 
-
+## AutoMapper
+- `dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection`
+- Add Helper Class (`MappingProfiles.cs`)
+- Adjust the Startup (add `AddAutoMapper.cs` service)
+- Add `IMapper` to the Controller
+- Configure the helper for User defined types by `ForMember` method
 
 
