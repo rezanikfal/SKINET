@@ -142,3 +142,8 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 
 ## Custom value resolver (Modify API Values)
 - Add `https://localhost:5001/` to the beginning of Picture Url
+- Add the Url yo the `appsettings.Development.json` and inject `IConfiguration` interface to the resolver
+
+## Store static files in *wwwroot* folder
+- Add image folder
+- Add `UseStaticFiles` middleware in Startup
