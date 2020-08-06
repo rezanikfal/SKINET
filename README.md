@@ -19,13 +19,20 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Get Dot Net Runtime version: `dotnet --info` => `Host (useful for support):  Version: 3.1.6`
 - `dotnet add package Microsoft.EntityFrameworkCore --version 3.1.6`
 - `dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.6`
-- `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.6`
+- SQlite: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.6`
+- SQL Server: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.6`
 
-## Setup connection string for SQlite
-
-    "ConnectionStrings": {
-        "DefaultConnection":"Data Source=skinet.db"
-    }
+## Setup connection string for SQlite/SQL Server
+```json
+"ConnectionStrings": 
+{
+    "DefaultConnection":"Data Source=skinet.db"
+}
+"ConnectionStrings":
+{
+    "CommanderConnection":"Server=11.111.11.111;Initial Catalog=GISapi;User Id=Admin;Password=*****;"
+}
+```
 
 ## Fix Startup -> IConfiguration injection
 
