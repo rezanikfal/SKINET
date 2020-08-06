@@ -22,7 +22,7 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - SQlite: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.6`
 - SQL Server: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.6`
 
-## Setup connection string for SQlite/SQL Server
+## Setup connection string for SQlite/SQL Server - Add DbContext Service to the Startup
 ```json
 "ConnectionStrings": 
 {
@@ -31,6 +31,13 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 "ConnectionStrings":
 {
     "CommanderConnection":"Server=11.111.11.111;Initial Catalog=GISapi;User Id=Admin;Password=*****;"
+}
+```
+```json
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
+    services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 }
 ```
 
