@@ -139,3 +139,6 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - Adjust the Startup (add `AddAutoMapper.cs` service)
 - Add `IMapper` to the Controller
 - Configure the helper for User defined types by `ForMember` method
+
+## Custom value resolver (Modify API Values)
+- Add `https://localhost:5001/` to the beginning of Picture Url
