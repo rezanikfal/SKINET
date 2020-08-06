@@ -34,11 +34,7 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 }
 ```
 ```json
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddControllers();
-    services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-}
+services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 ```
 
 ## Fix Startup -> IConfiguration injection
