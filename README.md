@@ -57,6 +57,7 @@ services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetC
 - `dotnet ef database update`
 
 ## Get Products Endpoint
+- Create ProductsController and Inject ProductContext to it
 
 ## Get Products/Product Endpoints ASYNC
 
