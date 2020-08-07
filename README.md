@@ -41,7 +41,7 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 
 ## Add Connectionstring to the Startup
 ```json
-services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("????????????")));
 ```
 
 ## Setup EF tool / Add migration
