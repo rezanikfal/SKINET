@@ -33,9 +33,6 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
     "CommanderConnection":"Server=11.111.11.111;Initial Catalog=GISapi;User Id=Admin;Password=*****;"
 }
 ```
-```json
-services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-```
 
 ## Fix Startup -> IConfiguration injection
 
@@ -43,6 +40,9 @@ services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetC
 - VSCODE -> File -> Preferences -> settings -> search `this` -> C# Extensions -> Uncheck
 
 ## Add Connectionstring to the Startup
+```json
+services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+```
 
 ## Setup EF tool / Add migration
 
