@@ -3,24 +3,22 @@
 This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1 along with the [bootstrap](https://getbootstrap.com/) version 4.5.0 based on the Udemy's course, [Learn to build an e-commerce app with .Net Core and Angular](https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/) by [Neil Cummings](https://www.udemy.com/user/neil-cummings-2/). 
 
 ## Create Solution & Web API
-
 - Create solution file with the folder name: `dotnet new sln`
 - Create web api project (i.e. API): `dotnet new webapi -o API`
 - Create API project to the solution: `dotnet sln add API`
 - Check project under the solution: `dotnet sln list`
 
 ## Trusting HTTPS, Add string endponits
-
 - Let the Postman trust https: `file > Setting > SSL certificate verification = OFF`
 - Let the Browser trust https: [Microsoft Website](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.0&branch=pr-en-us-14568&tabs=visual-studio#windows---certificate-not-trusted)
 
 ## Setup EF, Product Entity & StoreContext : DbContext
-
 - Get Dot Net Runtime version: `dotnet --info` => `Host (useful for support):  Version: 3.1.6`
 - `dotnet add package Microsoft.EntityFrameworkCore --version 3.1.6`
 - `dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.6`
 - SQlite: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.6`
 - SQL Server: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.6`
+- In Memory: `dotnet add package Microsoft.EntityFrameworkCore.InMemory`
 
 ## Setup connection string for SQlite/SQL Server - Add DbContext Service to the Startup
 ```json
@@ -35,17 +33,14 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 ```
 
 ## Fix Startup -> IConfiguration injection
-
 - VSCODE -> File -> Preferences -> settings -> search `private` -> add `_`
 - VSCODE -> File -> Preferences -> settings -> search `this` -> C# Extensions -> Uncheck
 
-## Add Connectionstring to the Startup
-```json
-services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("????????????")));
-```
+## Add DbContext Service to the Startup
+- SQL Server: `services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("??????")));`
+- In Memory (No Connection String): `services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));`
 
 ## Setup EF tool / Add migration
-
 - Get the SDK verion: `dotnet --info` =>  
     `.NET Core SDKs installed:`   
         `2.2.203 [C:\Program Files\dotnet\sdk]`  
@@ -56,13 +51,19 @@ services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetC
 - `dotnet ef migrations add InitialCreate -o Data/Migrations`
 - `dotnet ef database update`
 
-## Get Products Endpoint
+## Add Products Controller 
 - Create ProductsController and Inject ProductContext to it
+
+## [Scaffold a controller](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio-code#scaffold-a-controller)
+```
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet tool install --global dotnet-aspnet-codegenerator
+dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+```
 
 ## Get Products/Product Endpoints ASYNC
 
 ## Add new classlib (2 new projects based on the Architecture)
-
 - `dotnet new classlib -o Core`
 - `dotnet new classlib -o Infrastructure`
 - `dotnet sln add .\Core\`
@@ -72,10 +73,10 @@ services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetC
 - `skinet> dotnet restore`
 
 ## Refactor Data & Context - Exclude folders
-
 - VSCODE -> File -> Preferences -> settings -> search `exclude` -> add pattern -> **/obj, **/bin
 
 ## System Architecture
+
     API (Controller)  →  INFRASTRUCTURE (Repository, DbContext, Services)
              ↓            ↓                  ↓
     CORE (Entity, Interfaces)          Database, stripe
