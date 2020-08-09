@@ -61,7 +61,8 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
 ```
 
-## Get Products/Product Endpoints ASYNC
+## Make Products/Product Endpoints ASYNC
+The return type of the GetProducts and GetProduct methods is ActionResult<T> type. ASP.NET Core automatically serializes the object to JSON and writes the JSON into the body of the response message.
 
 ## Add new classlib (2 new projects based on the Architecture)
 - `dotnet new classlib -o Core`
