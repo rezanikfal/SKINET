@@ -36,6 +36,18 @@ This [project](https://github.com/TryCatchLearn/Skinet) was generated with [Angu
 - VSCODE -> File -> Preferences -> settings -> search `private` -> add `_`
 - VSCODE -> File -> Preferences -> settings -> search `this` -> C# Extensions -> Uncheck
 
+## Add Model to create the Tabel Structure 
+- Create **Models** folder and add the Entity class (like Feature, Product, ...)
+```c#
+[Key]
+public int Id { get; set; }
+[Required]
+public string   Name { get; set; }
+[Required]
+public string State { get; set; }
+public DateTime Created { get; set; }
+```
+
 ## Add DbContext Service to the Startup
 - SQL Server: `services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("??????")));`
 - In Memory (No Connection String): `services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));`
