@@ -51,6 +51,7 @@ public DateTime Created { get; set; }
 ## Add DbContext Service to the Startup
 - SQL Server: `services.AddDbContext<FeatureContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("??????")));`
 - In Memory (No Connection String): `services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));`
+- SQLite: `services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));`
 
 ## Setup EF tool / Add migration
 - Get the SDK verion: `dotnet --info` =>  
@@ -59,7 +60,6 @@ public DateTime Created { get; set; }
         `3.1.301 [C:\Program Files\dotnet\sdk]`
 - Pick the second version number and install (if needed):   
     `dotnet tool install --global dotnet-ef --version 3.1.301` Not worked, I installed with no version
-- `dotnet ef database update`
 - `dotnet ef migrations add InitialCreate -o Data/Migrations`
 - `dotnet ef database update`
 
